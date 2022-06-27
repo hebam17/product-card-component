@@ -11,9 +11,284 @@
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
+  --very-dark-cyan: rgba(26, 64, 49, 255);
 
   /* font */
   --para-font-size: 14px;
   --font-family1: "Montserrat", sans-serif;
   --font-family2: "Fraunces", serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.card-container {
+  width: 45%;
+  border-radius: 10px;
+  padding: 0;
+  margin: 1rem 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+}
+
+#card-img {
+  flex: 1;
+  background-image: url("../images/image-product-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#card-text {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  background: var(--white);
+}
+
+#logo {
+  font-family: var(--font-family1);
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+h1 {
+  font-family: var(--font-family2);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--very-dark-blue);
+}
+
+#para {
+  font-size: var(--para-font-size);
+  line-height: 1.6rem;
+  color: var(--dark-grayish-blue);
+  font-family: var(--font-family1);
+}
+
+#price {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#price-new {
+  font-size: 2rem;
+  font-family: var(--font-family2);
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+
+#price-old {
+  margin-left: 2rem;
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  font-family: var(--font-family1);
+  font-weight: 700;
+}
+
+button img {
+  margin-right: 0.7rem;
+}
+
+button:active,
+button:hover {
+  border: 0;
+  outline: none;
+}
+
+button:hover {
+  background: var(--very-dark-cyan);
+}
+
+/*  MEDIA QUERY*/
+
+/* /////// 1025px=========>1200px */
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+  .card-container {
+    width: 50%;
+  }
+}
+/* //////////////////// */
+
+/* //////////851px ==========> 1024px */
+@media screen and (max-width: 1024px) and (min-width: 851px) {
+  .card-container {
+    width: 60%;
+  }
+
+  #logo {
+    font-size: var(--para-font-size);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #price-new {
+    font-size: 1.8rem;
+  }
+}
+/* /////////////////////// */
+
+/* //////////769px ==========> 851px */
+@media screen and (max-width: 850px) and (min-width: 769px) {
+  .card-container {
+    width: 65%;
+  }
+
+  #logo {
+    font-size: var(--para-font-size);
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #price-new {
+    font-size: 1.8rem;
+  }
+}
+/* /////////////////////// */
+
+/* //////////600px ==========> 768px */
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .card-container {
+    width: 70%;
+  }
+
+  #card-text {
+    padding: 1.5rem;
+  }
+
+  #logo {
+    font-size: var(--para-font-size);
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #price-new {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+/* /////////////////////// */
+
+/* //////////481px ==========> 599px */
+@media screen and (max-width: 599px) and (min-width: 481px) {
+  .card-container {
+    width: 85%;
+  }
+
+  #card-text {
+    padding: 1.5rem;
+  }
+
+  #logo {
+    letter-spacing: 0.2rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #price-new {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+/* /////////////////////// */
+
+/* //////////320px ==========> 480px */
+@media screen and (max-width: 480px) and (min-width: 200px) {
+  .container {
+    height: 100vh;
+    overflow: auto;
+  }
+  .card-container {
+    width: 90%;
+    height: 90%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #card-img {
+    background-image: url("../images/image-product-mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    min-height: 40%;
+    max-height: 45%;
+  }
+  #card-text {
+    padding: 1.6rem;
+  }
+
+  #logo {
+    font-size: 12px;
+    letter-spacing: 0.3rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #price-new {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}
+/* /////////////////////// */
