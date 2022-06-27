@@ -137,6 +137,7 @@ button:hover {
 
 button:hover {
   background: var(--very-dark-cyan);
+  cursor: pointer;
 }
 
 /*  MEDIA QUERY*/
