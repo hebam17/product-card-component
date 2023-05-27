@@ -4,6 +4,6 @@
 
 - The button has no functionality but it can be integerated in ecommerce beautifully
 
-- Use HTML, CSS , and vanilla js
+- Use HTML, CSS only
 
 ![the time tracking dashboard](./design/desktop-design.jpg)
